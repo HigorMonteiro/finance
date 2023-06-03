@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
+    "corsheaders",
+    "rest_framework",
 
     'health_check',
     'health_check.db',
@@ -165,4 +168,10 @@ MATERIAL_ADMIN_SITE = {
     'MODEL_ICONS': {  # Set icons for models(lowercase), including 3rd party models, {'model_name': 'material_icon_name', ...}
         'site': 'contact_mail',
     }
+}
+
+CORS_ORIGIN_WHITELIST = ['http://localhost:5173']
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }

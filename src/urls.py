@@ -21,4 +21,5 @@ import health_check.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('health/app', include(health_check.urls)),
+    path('api/', include('core.urls'))
 ]

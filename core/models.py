@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class CreditCard(models.Model):
     card = models.CharField(max_length=200)
